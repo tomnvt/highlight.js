@@ -1,0 +1,67 @@
+{
+  "name": "highlight.js",
+  "description": "Syntax highlighting with language autodetection.",
+  "keywords": [
+    "highlight",
+    "syntax"
+  ],
+  "homepage": "https://highlightjs.org/",
+  "version": "11.12.0",
+  "author": "Josh Goebel <hello@joshgoebel.com>",
+  "contributors": [
+    "Josh Goebel <hello@joshgoebel.com>",
+    "Egor Rogov <e.rogov@postgrespro.ru>",
+    "Vladimir Jimenez <me@allejo.io>",
+    "Ivan Sagalaev <maniac@softwaremaniacs.org>",
+    "Jeremy Hull <sourdrums@gmail.com>",
+    "Oleg Efimov <efimovov@gmail.com>",
+    "Gidi Meir Morris <gidi@gidi.io>",
+    "Jan T. Sott <git@idleberg.com>",
+    "Li Xuanji <xuanji@gmail.com>",
+    "Marcos Cáceres <marcos@marcosc.com>",
+    "Sang Dang <sang.dang@polku.io>"
+  ],
+  "bugs": {
+    "url": "https://github.com/highlightjs/highlight.js/issues"
+  },
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/highlightjs/highlight.js.git"
+  },
+  "type": "commonjs",
+  "main": "./lib/index.js",
+  "types": "./types/index.d.ts",
+  "sideEffects": [
+    "./es/common.js",
+    "./lib/common.js",
+    "*.css",
+    "*.scss"
+  ],
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "require": "./lib/index.js",
+      "import": "./es/index.js"
+    },
+    "./package.json": "./package.json",
+    "./lib/common": {
+      "require": "./lib/common.js",
+      "import": "./es/common.js"
+    },
+    "./lib/core": {
+      "require": "./lib/core.js",
+      "import": "./es/core.js"
+    },
+    "./lib/languages/*": {
+      "require": "./lib/languages/*.js",
+      "import": "./es/languages/*.js"
+    },
+    "./scss/*": "./scss/*",
+    "./styles/*": "./styles/*",
+    "./types/*": "./types/*"
+  }
+}
